@@ -1,5 +1,41 @@
 <!DOCTYPE html>
 <style>
+    #search-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+    }
+
+    #search-form {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    #search-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 15px;
+        width: 500px;
+        height: 25px;
+    }
+
+    #search-bar {
+        width: 500px;
+        height: 25px;
+        border-color: rgb(208, 219, 230);
+    }
+
+    #searchbar-button {
+        width: 125px;
+        height: 36px;
+        margin: 5px;
+        border-color:transparent;
+    }
 </style>
 <html>
     <head>
@@ -11,12 +47,14 @@
     </head>
     <body>
         <header></header>
-        <div>
-            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="The Google logo.">
-            <form>
-                <input type="text">
-                <button type="submit">Google Search</button>
-                <button type="submit">I'm Feeling Lucky</button>
+        <div id="search-container">
+            <img id="google-logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="The Google logo.">
+            <form id="search-form">
+                <input id="search-bar" type="text">
+                <div id=search-buttons>
+                    <button id="searchbar-button" type="submit">Google Search</button>
+                    <button id="searchbar-button" type="submit">I'm Feeling Lucky</button>
+                </div>
             </form>
         </div>
         <footer></footer>
