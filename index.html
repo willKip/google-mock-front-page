@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <style>
+    :root {
+        --background-gray: #f8f9fa;
+        --border-gray: #dfe1e5;
+        --dark-text: #5a5b5a;
+    }
+
     body {
         display: flex;
         justify-content: center;
@@ -39,7 +45,7 @@
 
         gap: 12px;
         height: 42px;
-        border: 1px solid #dfe1e5;
+        border: 1px solid var(--border-gray);
         border-radius: 30px;
     }
     .search-bar:focus-within {
@@ -59,14 +65,21 @@
         width: 125px;
         height: 36px;
         margin: 5px;
-        background-color: #f8f9fa;
-        color: #5a5b5a;
+        background-color: var(--background-gray);
+        color: var(--dark-text);
         border-color:transparent;
+    }
+    .searchbar-button:hover {
+        box-shadow: 0 0 2px rgba(0,0,0,0.4);
     }
 
     .icon-styling {
         filter: invert(67%) sepia(12%) saturate(168%) hue-rotate(169deg) brightness(94%) contrast(82%);
-        transform: scale(0.7);
+        transform: scale(0.6);
+    }
+
+    .clickable {
+        cursor: pointer;
     }
 
 
@@ -87,12 +100,12 @@
             <div class="search-bar">
                 <img src="search.svg" alt="" class="icon-styling">
                 <input id="search-bar-input" type="text">
-                <img src="mic.svg" alt="Search by voice icon." class="icon-styling">
+                <img src="mic.svg" alt="Search by voice icon." class="icon-styling clickable">
             </div>
 
             <div id=search-buttons>
-                <button class="searchbar-button" type="button">Google Search</button>
-                <button class="searchbar-button" type="button">I'm Feeling Lucky</button>
+                <button class="searchbar-button clickable" type="button">Google Search</button>
+                <button class="searchbar-button clickable" type="button">I'm Feeling Lucky</button>
             </div>
         </div>
         <footer></footer>
