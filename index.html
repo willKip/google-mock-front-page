@@ -4,20 +4,49 @@
         --background-gray: #f8f9fa;
         --border-gray: #dfe1e5;
         --dark-text: #5a5b5a;
+        font-family: "arial", serif;
     }
 
     body {
         display: flex;
-        justify-content: center;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
+    }
+
+    nav {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+    nav ul {
+        display: flex;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .nav-item {
+        margin: 10px;
+        cursor: pointer;
+    }
+    .nav-item:hover {
+        text-decoration: underline;
     }
 
     #search-container {
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
+        flex-direction: column;
         width: 90vw;
         min-width: 70vw;
+        margin-top: 200px;
+    }
+
+    #google-logo {
+        width: 272px;
     }
 
     #search-buttons {
@@ -78,11 +107,19 @@
         transform: scale(0.6);
     }
 
+    #apps-icon {
+        transform: scale(1.2);
+    }
+
+    #apps-icon:hover {
+        box-shadow: 0 0 0 5px rgba(0,0,0,0.2);
+        background-color: rgba(0,0,0,0.2);
+        border-radius: 50%;
+    }
+
     .clickable {
         cursor: pointer;
     }
-
-
 </style>
 
 <html lang="en">
@@ -94,13 +131,24 @@
         <meta name="description" content="A nonfunctional Google mockup">
     </head>
     <body>
-        <header></header>
+        <nav>
+            <ul>
+                <li class="nav-item" style="font-size: 14px">About</li>
+                <li class="nav-item" style="font-size: 14px">Store</li>
+                <li class="nav-item" style="margin-left: auto; font-size: 13px">Gmail</li>
+                <li class="nav-item" style="font-size: 13px">Images</li>
+                <li class="nav-item">
+                    <img src="apps.svg" alt="Apps icon." class="icon-styling" draggable="false"
+                         id="apps-icon">
+                </li>
+            </ul>
+        </nav>
         <div id="search-container">
-            <img id="google-logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="The Google logo.">
+            <img id="google-logo" src="logo.png" alt="The Google logo.">
             <div class="search-bar">
-                <img src="search.svg" alt="" class="icon-styling">
+                <img src="search.svg" alt="" class="icon-styling" draggable="false">
                 <input id="search-bar-input" type="text">
-                <img src="mic.svg" alt="Search by voice icon." class="icon-styling clickable">
+                <img src="mic.svg" alt="Search by voice icon." class="icon-styling clickable" draggable="false">
             </div>
 
             <div id=search-buttons>
