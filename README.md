@@ -10,7 +10,7 @@ curriculum.
 
 ## Usage
 The page is hosted on GitHub Pages and can
-be accessed [here](https://willkip.github.io/google-mock-homepage/).
+be accessed [here](https://willkip.github.io/google-mock-front-page/).
 
 Below is its appearance in a scaled-down window:
 
